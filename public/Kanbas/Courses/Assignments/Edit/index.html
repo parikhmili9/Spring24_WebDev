@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Edit Assignment</title>
+</head>
+<body>
+    <div>
+        <select id="grader-dropdown" name="grader-dropdown">
+            <option value="speedgrader" selected>SpeedGrader</option>
+        </select><br/>
+    </div>
+
+    <form id="edit-assignments">
+        <h3>Assignment Name</h3>
+        <input type="text" id="assignment-name" name="assignment_name" value="A1 - ENV + HTML" required><br/>
+        <br/>
+        <textarea id="assignment-description" name="assignment_description" rows="2" required>This is the assignment description</textarea><br/>
+        <br/>
+        <label for="points">Points</label><br>
+        <input type="number" id="points" name="points" value="100" required><br>
+        <br/>
+        <label for="assignment-group">Assignment Group</label><br/>
+        <select id="assignment-group" name="assignment_group">
+            <option value="assignments" selected>ASSIGNMENTS</option>
+        </select><br/>
+        <br/>
+        <label for="display-grade">Display Grade as</label><br/>
+        <select id="display-grade" name="display_grade">
+            <option value="percentage" selected>Percentage</option>
+        </select><br/>
+        <br/>
+        <label for="submission-type">Submission Type</label><br/>
+        <select id="submission-type" name="submission_type">
+            <option value="online" selected>Online</option>
+        </select><br/>
+        <br/>
+        <label>Online Entry Options</label>
+        <br/>
+        <input type="checkbox" value="text_entry" name="text_entry" id="chkbox_text_entry"/>
+        <label for="chkbox_text_entry">Text Entry</label>    <br/>
+
+        <input type="checkbox" value="website_url" name="website_url" id="chkbox_website_url"/>
+        <label for="chkbox_website_url">Website URL</label>    <br/>
+
+        <input type="checkbox" value="media_recordings" name="media_recordings" id="chkbox_media_recordings"/>
+        <label for="chkbox_media_recordings">Media Recordings</label> <br/>
+
+        <input type="checkbox" value="student_annotation" name="student_annotation" id="chkbox_student_annotation"/>
+        <label for="chkbox_student_annotation">Student Annotation</label> <br/>
+
+        <input type="checkbox" value="file_uploads" name="file_uploads" id="chkbox_file_uploads"/>
+        <label for="chkbox_file_uploads">File Uploads</label> <br/>
+
+        <br/>
+        <label for="assign-to">Assign</label><br/>
+        <label for="assign-to">Assign to</label><br/>
+        <input type="text" id="assign-to" name="assign-to" value="Everyone" required><br/>
+
+        <br/>
+        <label for="due">Due</label><br/>
+        <input type="date" id="due" name="due" value="2021-01-01" required><br/>
+
+        <br/>
+        <label for="available-from">Available from</label><br/>
+        <input type="date" id="available-from" name="available_from" value="2021-01-01" required><br/>
+
+        <br/>
+        <label for="until">Until</label><br/>
+        <input type="date" id="until" name="until" value="2021-01-01" required><br/>
+
+        <br/>
+        <div>
+            <button type="submit" name="cancel" value="cancel">Cancel</button>
+            <button type="submit" name="save" value="save">Save</button>
+        </div>
+    </form>
+
+</body>
+</html>
