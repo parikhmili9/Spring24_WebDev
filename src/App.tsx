@@ -12,11 +12,11 @@ function App() {
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="public/Kanbas/Account/Profile/screen/html"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Go to Kanbas
         </a>
       </header>
     </div>
