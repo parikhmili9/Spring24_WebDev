@@ -12,7 +12,7 @@ function App() {
         </p>
         <a
           className="App-link"
-          href="public/Kanbas/Account/Profile/screen/html"
+          href="/Kanbas/Account/Profile/screen.html"
           target="_blank"
           rel="noopener noreferrer"
         >
