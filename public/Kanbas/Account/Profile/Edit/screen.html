@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Profile</title>
+        <title>Edit Profile</title>
         <style>
             /* Basic CSS to ensure the layout is as expected */
             table {
@@ -31,7 +31,7 @@
     <tbody>
         <tr>
             <!-- Kanbas Navigation -->
-            <td>
+            <td width="20%">
                 <ul>
                     <li>
                         <a href="/Kanbas/Account/Navigation/index.html">Account</a>
@@ -64,7 +64,7 @@
             </td>
 
             <!-- Account Navigation -->
-            <td>
+            <td width="20%">
                 <ul>
                     <li>
                         <a href="/Kanbas/Account/Navigation/index.html">Notification</a>
@@ -97,26 +97,70 @@
             </td>
 
             <!-- Profile -->
-            <td>
+            <td width="40%">
                 <div>
-                    <p>Jose Annunziato's profile</p>
-                    <hr>
+                    <h2>Jose Annunziato</h2>
                 </div>
             
-                <h1>Jose Annunziato</h1>
+                <form id="edit-profile">
+                    <label>Name:* </label>
+                    <input type="text" id="name" name="name" value="Jose Annunziato" required>
+                    
+                    <label>Pronouns: </label>
+                    <select id="pronouns-dropdown" name="pronouns-dropdown">
+                        <option value="None" selected>None</option>
+                    </select><br/>
+                    <br/>
             
-                <div class="edit-profile">
+                    <label>Title: </label>
+                    <input type="text" id="title" name="title">
+                    
+                    <br/>
+                    <br/>
+                    <h3>Contact</h3>
+                    <p>No registered services, you can add some on the <a href="/Kanbas/Account/Settings/index.html">settings</a> page.</p>
+            
+                    <h3>Biography</h3>
+                    <p>Faculty, Software Engineer, AI, Space and renewable enthusiast.</p>
+                    <textarea id="biography" name="biography" rows="3" cols="53" rows="10">Faculty, Software Engineer, AI, Space and renewable enthusiast.</textarea><br/>
+                    
+                    <br/>
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a href="https://www.youtube.com">YouTube. Links to an external site.</a></li>
+                    </ul>
+            
+                    <table>
+                        <tr>
+                            <th>Title</th>
+                            <th>URL</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" id="youtube" name="youtube" value="YouTube">
+                                <!--Add arrow icon here-->
+                            </td>
+                            <td>
+                                <input type="text" id="youtube-url" name="youtube-url" value="https://www.youtube.com">
+                            </td>
+                            <td>
+                                <a href="#">Remove</a>
+                            </td>
+                        </tr>
+                        <!-- Add more links as needed -->
+                    </table>
+            
+                    <button>Add another link</button><br/>
+                    <button>Cancel</button>
+                    <button>Save Profile</button><br/>
                     <button href="/Kanbas/Account/Profile/Edit/screen.html">Edit Profile</button>
-                </div>
+                    <button>Cancel Editing</button><br/>
             
-                <h2>Contact</h2>
-                <p>No registered services, you can add some on the <a href="/Kanbas/Account/Settings/index.html">settings</a> page.</p>
-            
-                <h2>Biography</h2>
-                <p>Faculty, Software Engineer, AI, Space, and renewables enthusiast.</p>
-            
-                <h2>Links</h2>
-                <a href="https://www.youtube.com" target="_blank">YouTube</a>            
+                </form>         
+            </td>
+            <td width="20%">
+
             </td>
         </tr>
     </tbody>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Edit Assignment</title>
+</head>
+<body>
+    <div>
+        <h2>Jose Annunziato</h2>
+    </div>
+
+    <form id="edit-profile">
+        <label>Name:* </label>
+        <input type="text" id="name" name="name" value="Jose Annunziato" required>
+        
+        <label>Pronouns: </label>
+        <select id="pronouns-dropdown" name="pronouns-dropdown">
+            <option value="None" selected>None</option>
+        </select><br/>
+        <br/>
+
+        <label>Title: </label>
+        <input type="text" id="title" name="title">
+
+        <h3>Contact</h3>
+        <p>No registered services, you can add some on the <a href="/Kanbas/Account/Settings/index.html">settings</a> page.</p>
+
+        <h3>Biography</h3>
+        <p>Faculty, Software Engineer, AI, Space and renewable enthusiast.</p>
+        <textarea id="biography" name="biography" rows="3" cols="53" rows="10">Faculty, Software Engineer, AI, Space and renewable enthusiast.</textarea><br/>
+
+        <h3>Links</h3>
+        <ul>
+            <li><a href="https://www.youtube.com">YouTube. Links to an external site.</a></li>
+        </ul>
+
+        <table>
+            <tr>
+                <th>Title</th>
+                <th>URL</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" id="youtube" name="youtube" value="YouTube">
+                    <!--Add arrow icon here-->
+                </td>
+                <td>
+                    <input type="text" id="youtube-url" name="youtube-url" value="https://www.youtube.com">
+                </td>
+                <td>
+                    <a href="#">Remove</a>
+                </td>
+            </tr>
+            <!-- Add more links as needed -->
+        </table>
+
+        <button>Add another link</button><br/>
+        <button>Cancel</button>
+        <button>Save Profile</button><br/>
+        <button href="/Kanbas/Account/Profile/Edit/screen.html">Edit Profile</button>
+        <button>Cancel Editing</button><br/>
+
+    </form>
+
+</body>
+</html>
