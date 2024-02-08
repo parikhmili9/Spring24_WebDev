@@ -1,0 +1,223 @@
+.wd-modules,
+.wd-modules * {
+  border-radius: 0%;
+  border: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.wd-modules {
+  margin: 5px;
+}
+
+.wd-modules > li {
+  background-color: lightgray;
+  border: 1px solid gray !important;
+  border-left: none !important;
+}
+
+.wd-modules > li > div {
+  padding: 6px;
+  border-left: 1px solid gray !important;
+}
+
+.wd-modules > li > ul > li {
+  padding: 5px;
+  border-top: 1px solid gray !important;
+  border-left: 2px solid green;
+}
+
+.wd-modules > li {
+  margin-bottom: 20px;
+}
+
+.wd-flex-grow-1 {
+    flex-grow: 1;
+    margin-left: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+  }
+  
+  .wd-flex-grow-1 a{
+    display: inline;
+    text-decoration: none;
+    color: red;
+    margin-left: 20px;
+  }
+
+  .wd-flex-grow-1 button{
+     display: flex end;
+  }
+
+  .wd-main-navigation{
+    list-style: none;
+    margin-top: 20px;
+    margin-left: 80px;
+    margin-right: 10px;
+  }
+
+  .wd-right-status{
+    list-style: none;
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  button{
+    background: #f5f5f5;
+    color: #2d3b45;
+    border: 1px solid;
+    border-color: #c7cdd1;
+    border-radius: 3px;
+    transition: background-color .2s ease-in-out;
+    display: inline-block;
+    position: relative;
+    padding: 8px 14px;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    text-decoration: none;
+    overflow: hidden;
+    text-shadow: none;
+    user-select: none;
+    width: max-content;
+  }
+
+  .btn{
+    background: #f5f5f5;
+    color: #2d3b45;
+    border: 1px solid;
+    border-color: #c7cdd1;
+    border-radius: 3px;
+    transition: background-color .2s ease-in-out;
+    display: inline-block;
+    position: relative;
+    padding: 8px 14px;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    text-decoration: none;
+    overflow: hidden;
+    text-shadow: none;
+    user-select: none;
+  }
+
+  .main_btn button{
+    width: 100%;
+    display: block;
+    margin-bottom: 3px;
+  }
+
+  .wd-new-container{
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .wd-new-container button{
+    margin-right: 2px;
+  }
+
+  .list-group a{
+    color: black;
+    
+  }
+  .list-group {
+    border-radius: 0%;
+  }
+
+  .ms-1 {
+    margin-left: 20px !important;
+  }
+  
+  .list-group > a:not(:first-child) {
+    border-left: 4px solid green;
+  }
+  .list-group-s > a:not(:first-child) {
+    border-left: 1px light black;
+  }
+
+  .container {
+    width: 800px;
+  }
+  
+  .col-auto{
+    width: 75%;
+  }
+
+  .float-md-end{
+    padding-right: 5px;
+    float: inline-end;
+  }
+
+  .rounded-input {
+    border-radius: 30px; 
+    padding: 5px; 
+    border: 2px solid #ccc;
+    outline: none; 
+  }
+
+  .navbar-icon, .navbar-title {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-icon i {
+    font-size: 24px;
+    margin: 0 10px;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 800px; /* or whatever maximum width you prefer */
+    margin: 0 auto; /* this will center the container */
+  }
+
+  /* .col-auto{
+    width: 75%;
+  } */
+
+  .col-form-label {
+    font-size: 1rem; /* Set a base font size for labels */
+    margin-right: 10px;
+    width: 200px;
+    white-space: nowrap; /* Prevent label text from wrapping */
+  }
+
+  .col-form-item{
+    width: 600px;
+  }
+
+  .wd-grid-col-assignments-edit{
+    width: auto;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .table-container {
+    max-width: 100%; /* Adjust as needed */
+    overflow-x: auto;
+}
+
+.table.table-striped.table-hover th,
+.table.table-striped.table-hover td {
+  border-right: 1px solid black; /* Column border color */
+}
+
+.course-det table td{
+   padding: 20px;
+}
+
+.nav-td a{
+  margin-right: 50px;
+  
+}

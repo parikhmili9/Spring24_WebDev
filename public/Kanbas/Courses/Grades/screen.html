@@ -1,323 +1,329 @@
 <html>
     <head>
         <title>Grades Screen</title>
-        <style>
-            /* Basic CSS to ensure the layout is as expected */
-            table {
-                width: 100%;
-            }
-            td {
-                vertical-align: top;
-                padding: 10px; /* Adjust padding as needed */
-            }
-            h3 {
-                margin-top: 0;
-            }
-            /* Add any additional styles you need here */
-        </style>
+        <link rel="stylesheet" href="/Kanbas/styles.css" />
+        <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+        <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
+        <link rel="stylesheet" href="/Kanbas/Courses/Assignment/index.css" />
+        <link rel="stylesheet" href="/Kanbas/Courses/Home/index.css" />
+        <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.css"
+              rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      
     </head>
     <body>
-    <table>
-    <tbody>
-        <tr>
-            <!-- Kanbas Navigation -->
-            <td>
-                <ul>
+        <div class="wd-grid-row" style="clear: both;">
+            <div class="wd-grid-col-kanbas-nav" style="width: 80px; float: left;">
+                <ul  class="wd-kanbas-navigation">
+                    <li><a href="http://northeastern.edu"><i class="fa-solid fa-n" style="font-size: xxx-large;"></i></a></li>
                     <li>
-                        <a href="/Kanbas/Account/Profile/screen.html">Account</a>
+                        <a href="/Kanbas/Account/Profile/screen.html"><i class="fa-regular fa-circle-user account"></i>Account</a>
+                    </li>
+                    <li >
+                        <a href="/Kanbas/Dashboard/screen.html">
+                            <i class="fa fa-tachometer"></i>Dashboard</a>
+                    </li>
+                    <li class="wd-active">
+                        <a href="/Kanbas/Courses/Home/screen.html">
+                            <i class="fa-solid fa-book"></i>Courses</a>
                     </li>
                     <li>
-                        <!-- <a href="/Kanbas/Dashboard/screen.html">Dashboard</a> -->
-                        <a href="#">Dashboard</a>
+                        <a href="#"><i class="fa-sharp fa-regular fa-calendar-days"></i>Calendar</a>
                     </li>
                     <li>
-                        <a href="/Kanbas/Courses/Home/screen.html">Courses</a>
+                        <a href="#">
+                            <i class="fa-solid fa-inbox"></i>  Inbox</a>
                     </li>
                     <li>
-                        <!-- <a href="/Kanbas/Calendar/index.html">Calendar</a> -->
-                        <a href="#">Calendar</a>
+                        <a href="#"><i class="fa-regular fa-clock"></i>History</a>
                     </li>
                     <li>
-                        <!-- <a href="/Kanbas/Inbox/index.html">Inbox</a> -->
-                        <a href="#">Inbox</a>
+                        <a href="#"><i class="fa-solid fa-tv"></i>Studio</a>
                     </li>
                     <li>
-                        <!-- <a href="/Kanbas/History/index.html">History</a> -->
-                        <a href="#">History</a>
+                        <a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Commons</a>
                     </li>
                     <li>
-                        <!-- <a href="/Kanbas/Studio/index.html">Studio</a> -->
-                        <a href="#">Studio</a>
+                        <a href="#"><i class="fa-regular fa-circle-question"></i><br/>Help</a>
                     </li>
-                    <li>
-                        <!-- <a href="/Kanbas/Commons/index.html">Commons</a> -->
-                        <a href="#">Commons</a>
-                    </li>
-                    <li>
-                        <!-- <a href="/Kanbas/Help/index.html">Help</a> s-->
-                        <a href="#">Help</a>
-                    </li>
-                </ul>   
-            </td>
+                </ul>
+            </div>
 
-            <!-- Course Navigation -->
-            <td>
-                <ul>
+            <nav style="--bs-breadcrumb-divider: '>'; padding-top: 20px;" aria-label="breadcrumb">
+                <ol class="breadcrumb" style="background-color: white;">
+                    <li class="navbar-icon">
+                        <a href="../kanbas.html">
+                            <i class="fa fa-bars" style="color: red; padding-left: 20px;" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item" style="color: red; padding-left: 20px;">
+                        CS5610.11744.202310
+                    </li>
+                    <li class="breadcrumb-item" aria-current="page">
+                        Grades
+                    </li> 
+                </ol>
+            </nav>
+            <hr>
+
+            <div class="wd-grid-col-course-nav" style="width: 170px; float: left;">
+                <ul class="wd-navigation">
                     <li>
                         <a href="/Kanbas/Courses/Home/screen.html">Home</a>
                     </li>
                     <li>
-                        <!-- <a href="/Kanbas/Courses/Modules/screen.html">Modules</a> -->
                         <a href="#">Modules</a>
                     </li>
                     <li>
-                        <!-- <a href="/Kanbas/Courses/ZoomMeetings/index.html">Zoom Meetings</a> -->
                         <a href="#">Zoom Meetings</a>
                     </li>
                     <li>
                         <a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a>
                     </li>
                     <li>
-                        <!-- <a href="/Kanbas/Courses/Quizzes/index.html">Quizzes</a> -->
                         <a href="#">Quizzes</a>
                     </li>
-                    <li>
+                    <li class="wd-active">
                         <a href="/Kanbas/Courses/Grades/screen.html">Grades</a>
                     </li>
                     <li>
-                        <!-- <a href="/Kanbas/Courses/People/index.html">People</a> -->
                         <a href="#">People</a>
                     </li>
                     <li>
-                        <!-- <a href="/Kanbas/Courses/PanoptoVideo/index.html">Panopto Video</a> -->
                         <a href="#">Panopto Video</a>
                     </li>
                     <li>
-                        <!-- <a href="/Kanbas/Courses/Discussions/index.html">Discussions</a> -->
                         <a href="#">Discussions</a>
                     </li>
                     <li>
-                        <!-- <a href="/Kanbas/Courses/Announcements/index.html">Announcements</a> -->
                         <a href="#">Announcements</a>
                     </li>
                     <li>
-                        <!-- <a href="/Kanbas/Courses/Pages/index.html">Pages</a> -->
                         <a href="#">Pages</a>
                     </li>
                     <li>
-                        <!-- <a href="/Kanbas/Courses/Files/index.html">Files</a> -->
                         <a href="#">Files</a>
                     </li>
                     <li>
-                        <!-- <a href="/Kanbas/Courses/Rubrics/index.html">Rubrics</a> -->
                         <a href="#">Rubrics</a>
                     </li>
                     <li>
-                        <!-- <a href="/Kanbas/Courses/Outcomes/index.html">Outcomes</a> -->
                         <a href="#">Outcomes</a>
                     </li>
                     <li>
-                        <!-- <a href="/Kanbas/Courses/Collaborations/index.html">Collaborations</a> -->
                         <a href="#">Collaborations</a>
                     </li>
                     <li>
-                        <!-- <a href="/Kanbas/Courses/Syllabus/index.html">Syllabus</a> -->
                         <a href="#">Syllabus</a>
                     </li>
                     <li>
                         <a href="/Kanbas/Courses/Settings/CourseDetails/screen.html">Settings</a>
                     </li>
-                </ul>   
-            </td>
+                </ul>
+            </div>
 
-            <!-- Grades -->
-            <td>
-                <select name="gradebook">
-                    <option>Gradebook</option>
-                </select>
-                <button>Import</button>
-                <select name="export">
-                    <option>Export</option>
-                </select>
-                <button>Configure</button>
-            
-                <h2>Student Names</h2>
-                <input type="search" placeholder="Search Students">
-            
-                <h2>Assignment Names</h2>
-                <input type="search" placeholder="Search Assignments">
-            
-                <h3></h3>
-                <button>Apply Filters</button>
-            
-                <h3></h3>
-            
-                <table border="1">
-                    <thead>
-                        <tr>
-                            <th>Student Name</th>
-                            <th>A1 SETUP<br>Out of 100</th>
-                            <th>A2 HTML<br>Out of 100</th>
-                            <th>A3 CSS<br>Out of 100</th>
-                            <th>A4 BOOTSTRAP<br>Out of 100</th>
-                            <th>A5 JAVASCRIPT<br>Out of 100</th>
-                            <th>A6 REACT<br>Out of 100</th>
-                            <th>A7 REDUX<br>Out of 100</th>
-                            <th>A8 NODE<br>Out of 100</th>
-                            <th>A9 MONGO<br>Out of 100</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Alice Wonderland</td>
-                            <td>98</td>
-                            <td>89</td>
-                            <td>87</td>
-                            <td>90</td>
-                            <td>89</td>
-                            <td>94</td>
-                            <td>88</td>
-                            <td>87</td>
-                            <td>100</td>
-                        </tr>
-                        <tr>
-                            <td>Princes Leia</td>
-                            <td>98</td>
-                            <td>80</td>
-                            <td>87</td>
-                            <td>86</td>
-                            <td>100</td>
-                            <td>94</td>
-                            <td><input type="text" value="85" style="border: 1px solid #000; width: 50px; text-align: center;"/></td>
-                            <td>84</td>
-                            <td>92</td>
-                        </tr>   
-                        <tr>
-                            <td>Luke Skywalker</td>
-                            <td><input type="text" value="99" style="border: 1px solid #000; width: 50px; text-align: center;"/></td>
-                            <td>88</td>
-                            <td>97</td>
-                            <td>82</td>
-                            <td>96</td>
-                            <td>93</td>
-                            <td>95</td>
-                            <td>100</td>
-                            <td>93</td>
-                        </tr>   
-                        <tr>
-                            <td>Han Solo</td>
-                            <td>83</td>
-                            <td>99</td>
-                            <td>94</td>
-                            <td>98</td>
-                            <td>86</td>
-                            <td>85</td>
-                            <td><input type="text" value="86" style="border: 1px solid #000; width: 50px; text-align: center;"/></td>
-                            <td>80</td>
-                            <td>84</td>
-                        </tr>   
-                        <tr>
-                            <td>Lando Calresian</td>
-                            <td>83</td>
-                            <td><input type="text" value="92" style="border: 1px solid #000; width: 50px; text-align: center;"/></td>
-                            <td>80</td>
-                            <td>80</td>
-                            <td>92</td>
-                            <td>92</td>
-                            <td>94</td>
-                            <td>87</td>
-                            <td>95</td>
-                        </tr>   
-                        <tr>
-                            <td>Boba Fet</td>
-                            <td>85</td>
-                            <td>89</td>
-                            <td>94</td>
-                            <td>83</td>
-                            <td>83</td>
-                            <td>84</td>
-                            <td>91</td>
-                            <td>87</td>
-                            <td>96</td>
-                        </tr>   
-                        <tr>
-                            <td>Darth Vader</td>
-                            <td>81</td>
-                            <td>81</td>
-                            <td><input type="text" value="96" style="border: 1px solid #000; width: 50px; text-align: center;"/></td>
-                            <td>80</td>
-                            <td>89</td>
-                            <td>88</td>
-                            <td>82</td>
-                            <td>80</td>
-                            <td>82</td>
-                        </tr>   
-                        <tr>
-                            <td>Obi-Wan Kenobi</td>
-                            <td><input type="text" value="85" style="border: 1px solid #000; width: 50px; text-align: center;"/></td>
-                            <td>99</td>
-                            <td>87</td>
-                            <td>82</td>
-                            <td>88</td>
-                            <td>83</td>
-                            <td>88</td>
-                            <td>92</td>
-                            <td>80</td>
-                        </tr>   
-                        <tr>
-                            <td>R2-D2</td>
-                            <td>81</td>
-                            <td><input type="text" value="92" style="border: 1px solid #000; width: 50px; text-align: center;"/></td>
-                            <td><input type="text" value="82" style="border: 1px solid #000; width: 50px; text-align: center;"/></td>
-                            <td>86</td>
-                            <td>83</td>
-                            <td>84</td>
-                            <td>98</td>
-                            <td>85</td>
-                            <td>96</td>
-                        </tr>   
-                        <tr>
-                            <td>C-3PO</td>
-                            <td>94</td>
-                            <td>98</td>
-                            <td>83</td>
-                            <td>83</td>
-                            <td>100</td>
-                            <td>96</td>
-                            <td>96</td>
-                            <td>85</td>
-                            <td>87</td>
-                        </tr>   
-                        <tr>
-                            <td>Yoda</td>
-                            <td>80</td>
-                            <td>89</td>
-                            <td>99</td>
-                            <td>89</td>
-                            <td>96</td>
-                            <td>85</td>
-                            <td>96</td>
-                            <td>92</td>
-                            <td>85</td>
-                        </tr>  
-                        <tr>
-                            <td>Admiral Ackbar</td>
-                            <td>82</td>
-                            <td>88</td>
-                            <td>95</td>
-                            <td>100</td>
-                            <td><input type="text" value="93" style="border: 1px solid #000; width: 50px; text-align: center;"/></td>
-                            <td>98</td>
-                            <td>85</td>
-                            <td>87</td>
-                            <td>99</td>
-                        </tr>       
-                    </tbody>
-                </table>
-            
-            </td>
-        </tr>
-    </tbody>
-    </table>
+            <div class="wd-grid-col-grades">
+                <div class="wd-flex-grow-1">
+                    <div class="wd-new-container">
+                        <button class="btn-secondary">
+                            <i class="fa-solid fa-file-export" aria-hidden="true" style="margin-right: 4px;"></i>
+                            Import
+                        </button>
+                        <div class="dropdown">
+                            <button
+                                class="btn-secondary dropdown-toggle"
+                                type="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                <i class="fa-solid fa-file-export" aria-hidden="true" style="margin-right: 4px;"></i>
+                                Export
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="#">Action</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="btn-secondary">
+                            <i class="fa fa-cog" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <table class="table border-0" style="border-collapse: collapse;">
+                        <thead>
+                            <tr>
+                                <th scope="col">Student Names</th>
+                                <th scope="col">Assignment names</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border: solid white;">
+                                <td>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>
+                                            <i class="fa fa-search" aria-hidden="true"></i>
+                                            Search Students
+                                        </option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>
+                                            <i class="fa fa-search"></i>
+                                            Search Assignments
+                                        </option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr style="border: solid white;">
+                                <td>
+                                    <button>
+                                        <i class="fa fa-filter" aria-hidden="true" style="margin-right: 4px;"></i>
+                                        Apply Filter
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover">
+                            <thead style="text-align: center;">
+                                <tr class="table-secondary">
+                                    <th>
+                                        <b> Student Name</b>
+                                    </th>
+                                    <th>A1 SETUP <br/> Out of 100</th>
+                                    <th>A2 HTML <br/> Out of 100</th>
+                                    <th>A3 CSS <br/> Out of 100</th>
+                                    <th>A4 BOOTSTRAP <br/> Out of 100</th>
+                                    <th>A5 JAVASCRIPT <br/> Out of 100</th>
+                                </tr>
+                            </thead>
+                            <tbody style="text-align: center;" class="tbody-new">
+                                <tr>
+                                    <td>Alice Johnson</td>
+                                    <td>90</td>
+                                    <td style="background-color: lightblue;">
+                                        <input type="text" placeholder="96" 
+                                        style="border: none; box-sizing: border-box; background-color: var(--bs-breadcrumb-divider)">
+                                    </td>
+                                    <td>95</td>
+                                    <td>88</td>
+                                    <td>88</td>
+                                </tr>
+                                <tr>
+                                    <td>Bob Smith</td>
+                                    <td>88</td>
+                                    <td>92</td>
+                                    <td>87</td>
+                                    <td style="background-color: lightblue;">
+                                        <input type="text" placeholder="96" style="
+                                        
+                                        border: none;
+                                
+                                        box-sizing: border-box; background-color: var(--bs-breadcrumb-divider)">
+                                    </td>
+                                    <td>88</td>
+                                </tr>
+                                <tr>
+                                    <td>Charlie Brown</td>
+                                    <td style="background-color: lightblue;">
+                                        <input type="text" placeholder="96" style="
+                                        
+                                        border: none;
+                                
+                                        box-sizing: border-box; background-color: var(--bs-breadcrumb-divider)">
+                                    </td>
+                                    <td>85</td>
+                                    <td>80</td>
+                                    <td>75</td>
+                                    <td>88</td>
+                                </tr>
+                                <tr>
+                                    <td>Diana Martinez</td>
+                                    <td>95</td>
+                                    <td style="background-color: lightblue;">
+                                        <input type="text" placeholder="96" style="
+                                        
+                                        border: none;
+                                
+                                        box-sizing: border-box; background-color: var(--bs-breadcrumb-divider)">
+                                    </td>
+                                    <td>92</td>
+                                    <td>96</td>
+                                    <td>88</td>
+                                </tr>
+                                <tr>
+                                    <td>Matt Pal</td>
+                                    <td>95</td>
+                                    <td>92</td>
+                                    <td>92</td>
+                                    <td>96</td>
+                                    <td>88</td>
+                                </tr>
+                                <tr>
+                                    <td>Danna Fisher</td>
+                                    <td style="background-color: lightblue;">
+                                        <input type="text" placeholder="96" style="
+                                        
+                                        border: none;
+                                
+                                        box-sizing: border-box; background-color: var(--bs-breadcrumb-divider)">
+                                    </td>
+                                    <td style="background-color: lightblue;">
+                                        <input type="text" placeholder="96" style="
+                                        
+                                        border: none;
+                                
+                                        box-sizing: border-box; background-color: var(--bs-breadcrumb-divider)">
+                                    </td>
+                                    <td>92</td>
+                                    <td>96</td>
+                                    <td>88</td>
+                                </tr>
+                                <tr>
+                                    <td>Rahul Nehra</td>
+                                    <td>95</td>
+                                    <td>92</td>
+                                    <td>92</td>
+                                    <td>96</td>
+                                    <td>88</td>
+                                </tr>
+                                <tr>
+                                    <td>Toby Toby</td>
+                                    <td>95</td>
+                                    <td>
+                                        45
+                                    </td>
+                                    <td style="background-color: lightblue;">
+                                        <input type="text" placeholder="96" style="
+                                        
+                                        border: none;
+                                        
+                                        box-sizing: border-box; background-color: var(--bs-breadcrumb-divider)">
+                                    </td>
+                                    <td>96</td>
+                                    <td>88</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </body>
 </html>
