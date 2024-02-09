@@ -6,7 +6,8 @@
         <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
         <link rel="stylesheet" href="/Kanbas/Courses/Home/index.css" />
         <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.css" rel="stylesheet"/>
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
         <style>
             /* Basic CSS to ensure the layout is as expected */
@@ -25,7 +26,7 @@
     </head>
 
     <body>
-        <div class="wd-grid-row d-flex" style="clear: both;">
+        <div class="wd-grid-row" style="clear: both;">
             <div class="wd-grid-col-kanbas-nav d-none d-md-block" style="width: 80px; float: left;">
                 <ul  class="wd-kanbas-navigation">
                     <li><a href="http://northeastern.edu"><i class="fa-solid fa-n" style="font-size: xxx-large;"></i></a></li>
@@ -41,32 +42,209 @@
                             <i class="fa-solid fa-book"></i>Courses</a>
                     </li>
                     <li>
-                        <!-- <a href="/Kanbas/Calendar/index.html">Calendar</a> -->
                         <a href="#"><i class="fa-sharp fa-regular fa-calendar-days"></i>Calendar</a>
                     </li>
                     <li>
-                        <!-- <a href="/Kanbas/Inbox/index.html">Inbox</a> -->
                         <a href="#">
                             <i class="fa-solid fa-inbox"></i>  Inbox</a>
                     </li>
                     <li>
-                        <!-- <a href="/Kanbas/History/index.html">History</a> -->
                         <a href="#"><i class="fa-regular fa-clock"></i>History</a>
                     </li>
                     <li>
-                        <!-- <a href="/Kanbas/Studio/index.html">Studio</a> -->
                         <a href="#"><i class="fa-solid fa-tv"></i>Studio</a>
                     </li>
                     <li>
-                        <!-- <a href="/Kanbas/Commons/index.html">Commons</a> -->
                         <a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Commons</a>
                     </li>
                     <li>
-                        <!-- <a href="/Kanbas/Help/index.html">Help</a> s-->
                         <a href="#"><i class="fa-regular fa-circle-question"></i><br/>Help</a>
                     </li>
                 </ul>
             </div>
+
+            <div class="wd-grid-col-kanbas-nav d-block d-md-none">
+                <div class="row" style="background-color: black; color: white;">
+                    <div class="col d-flex justify-content-start" style="padding-top: 10px; padding-left: 20px;">
+                        <a data-bs-toggle="modal" data-bs-target="#overlayModal1">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        CS5610.11744.202310 <br/> Modules
+                    </div>
+                    <div class="col d-flex justify-content-end">
+                        <button style="background-color: black; color: white;">
+                            <i class="fa-solid fa-glasses"></i>
+                            <a data-bs-toggle="modal" data-bs-target="#overlayModal2">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container d-none d-md-block">
+                <div class="row">
+                  <div class="col">
+                    <nav style="--bs-breadcrumb-divider: '>'; padding-top: 20px;" aria-label="breadcrumb">
+                      <ol class="breadcrumb" style="background-color: white;">
+                        <li class="navbar-icon">
+                            <a href="../kanbas.html">
+                                <i class="fa fa-bars" style="color: red; padding-left: 20px;" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item" style="color: red; padding-left: 20px;">
+                            CS5610.11744.202310
+                        </li>
+                        <li class="breadcrumb-item" aria-current="page">
+                            Modules
+                        </li>
+                      </ol>
+                    </nav>
+                  </div>
+                  <div class="col-auto mt-3">
+                    <button type="button" class="button">
+                        <i class="fa-solid fa-glasses"></i>
+                        Student View
+                    </button>
+                  </div>
+                </div>
+            </div>
+            <hr>
+
+            <!-- Modal 1 for Kanbas Nav -->
+            <div class="modal" id="overlayModal1" tabindex="-1" aria-labelledby="overlayModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+                    <!-- Your content for the overlay goes here -->
+                    <ul style="color: red; font-size: large; list-style-type: none; padding: 10px;">
+                        <li style="padding: 10px;">
+                            <a href="/Kanbas/Account/Profile/screen.html" style="color: red;">
+                                <i class="fa-regular fa-circle-user account" style="padding-right: 10px;"></i>Account</a>
+                        </li>
+                        <li style="padding: 10px;">
+                            <a href="/Kanbas/Dashboard/screen.html" style="color: red;">
+                                <i class="fa fa-tachometer" style="padding: 10px;"></i>Dashboard</a>
+                        </li>
+                        <li style="padding: 10px;">
+                            <a href="/Kanbas/Courses/Home/screen.html" style="color: red;">
+                                <i class="fa-solid fa-book" style="padding: 10px;"></i>Courses</a>
+                        </li>
+                        <li style="padding: 10px;">
+                            <a href="#" style="color: red;">
+                                <i class="fa-sharp fa-regular fa-calendar-days" style="padding: 10px;"></i>Calendar</a>
+                        </li>
+                        <li style="padding: 10px;">
+                            <a href="#" style="color: red;">
+                                <i class="fa-solid fa-inbox" style="padding: 10px;"></i>Inbox</a>
+                        </li>
+                        <li style="padding: 10px;">
+                            <a href="#" style="color: red;">
+                                <i class="fa-regular fa-clock" style="padding: 10px;"></i>History</a>
+                        </li>
+                        <li style="padding: 10px;">
+                            <a href="#" style="color: red;">
+                                <i class="fa-solid fa-tv" style="padding: 10px;"></i>Studio</a>
+                        </li>
+                        <li style="padding: 10px;">
+                            <a href="#" style="color: red;">
+                                <i class="fa-solid fa-arrow-right-from-bracket" style="padding: 10px;"></i>Commons</a>
+                        </li>
+                        <li style="padding: 10px;">
+                            <a href="#" style="color: red;">
+                                <i class="fa-regular fa-circle-question" style="padding: 10px;"></i>Help</a>
+                        </li>
+                    </ul>
+                    </div>
+                    <!-- Modal Footer (Optional) -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <!-- Modal 2 for Course Nav -->
+            <div class="modal" id="overlayModal2" tabindex="-1" aria-labelledby="overlayModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+                    <!-- Your content for the overlay goes here -->
+                    <ul style="color: red; font-size: large; list-style-type: none; padding: 10px;">
+                        <li style="color: red;">
+                            <a href="/Kanbas/Courses/Home/screen.html">Home</a>
+                        </li>
+                        <li style="color: red;">
+                            <a href="#">Modules</a>
+                        </li>
+                        <li>
+                            <a href="#">Zoom Meetings</a>
+                        </li>
+                        <li>
+                            <a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a>
+                        </li>
+                        <li>
+                            <a href="#">Quizzes</a>
+                        </li>
+                        <li class="wd-active">
+                            <a href="/Kanbas/Courses/Grades/screen.html">Grades</a>
+                        </li>
+                        <li>
+                            <a href="#">People</a>
+                        </li>
+                        <li>
+                            <a href="#">Panopto Video</a>
+                        </li>
+                        <li>
+                            <a href="#">Discussions</a>
+                        </li>
+                        <li>
+                            <a href="#">Announcements</a>
+                        </li>
+                        <li>
+                            <a href="#">Pages</a>
+                        </li>
+                        <li>
+                            <a href="#">Files</a>
+                        </li>
+                        <li>
+                            <a href="#">Rubrics</a>
+                        </li>
+                        <li>
+                            <a href="#">Outcomes</a>
+                        </li>
+                        <li>
+                            <a href="#">Collaborations</a>
+                        </li>
+                        <li>
+                            <a href="#">Syllabus</a>
+                        </li>
+                        <li>
+                            <a href="/Kanbas/Courses/Settings/CourseDetails/screen.html">Settings</a>
+                        </li>
+                    </ul>
+                    </div>
+                    <!-- Modal Footer (Optional) -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+
             <div class="wd-grid-col-course-nav d-none d-md-block" style="width: 125px; float: left;">
                 <ul class="wd-navigation">
                     <li class="wd-active">
@@ -123,41 +301,7 @@
                 </ul>
             </div>
 
-            <!-- <div class="wd-grid-col-home" style="float: left;">
-                <ul class="list-group wd-modules">
-                    <li class="list-group-item">
-                      <div>
-                        <i class="fa fa-ellipsis-v"></i> Week 1
-                        <span class="float-end">
-                          <i class="fa fa-check-circle text-success"></i>
-                          <i class="fa fa-plus ms-2"></i>
-                          <i class="fa fa-ellipsis-v ms-2"></i>
-                        </span>
-                      </div>
-                      <ul class="list-group">
-                        <li class="list-group-item">
-                          <i class="fa fa-ellipsis-v"></i> Learning Objectives
-                          <span class="float-end">
-                            <i class="fa fa-check-circle text-success"></i>
-                            <i class="fa fa-ellipsis-v ms-2"></i>
-                          </span>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="list-group-item">
-                      <div>
-                        <i class="fa fa-ellipsis-v"></i> Week 2
-                        <span class="float-end">
-                          <i class="fa fa-check-circle text-success"></i>
-                          <i class="fa fa-plus ms-2"></i>
-                          <i class="fa fa-ellipsis-v ms-2"></i>
-                        </span>
-                      </div>
-                    </li>
-                  </ul>              
-            </div> -->
-
-            <div class="flex-fill" style="float: left;">
+            <div class="wd-grid-col-home" style="float: left; width: 750px;">
                 <div class="wd-flex-grow-1">
                     <div class="wd-new-container">
                         <button class="collapse-btn">Collapse All</button>
@@ -505,15 +649,15 @@
             </div>
 
 
-            <div class="wd-flex-grow-0 me-2 wd-right-status d-none d-lg-block" style="width: auto; float: left;">
+            <div class="wd-right-status d-none d-lg-block" style="width: auto; float: left;">
                 <h4>Course Status</h4>
                 <div>
                     <span>
-                        <button type="button">
+                        <button type="button" style="width: 120px; font-size: small;">
                             <i class="fa fa-ban" aria-hidden="true"></i>
                             Unpublished
                         </button>
-                        <button type="button" style="background-color: green; color: white; opacity: 0.5; pointer-events: none;">
+                        <button type="button" style="width: 120px; font-size: small; background-color: green; color: white; opacity: 0.5; pointer-events: none;">
                             <i class="fa fa-check-circle " style="color: white;" aria-hidden="true"></i>
                             Published
                         </button>
@@ -534,6 +678,16 @@
                 </div>
                 <br>
                 <h5>To Do</h5>
+                <ul class="navigation">
+                    <li>
+                        <a href="/Kanbas/Courses/Grades/screen.html">
+                            Grade A1 - ENV + HTML
+                        </a>
+                        <br/>
+                        100 points | Sep 18 at 11.59 pm
+                    </li>
+
+                </ul>
                 <hr>
                 <h4>Course Status</h4>
                 <a href="#">View Calander</a>

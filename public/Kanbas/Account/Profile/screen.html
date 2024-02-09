@@ -1,142 +1,139 @@
 <html>
     <head>
         <title>Profile</title>
+        <link rel="stylesheet" href="/Kanbas/styles.css" />
+        <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+        <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
+        <link rel="stylesheet" href="/Kanbas/Courses/Home/index.css" />
+        <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
         <style>
-            /* Basic CSS to ensure the layout is as expected */
-            table {
-                width: 100%;
-            }
-            td {
-                vertical-align: top;
-                padding: 10px; /* Adjust padding as needed */
-            }
-            h3 {
-                margin-top: 0;
-            }
-            body {
-                font-family: Arial, sans-serif; /* or any other font you prefer */
-            }
+            
             .edit-profile {
                 float: right; /* Aligns the edit button to the right */
                 margin-bottom: 20px; /* Provides space below the button */
                 margin-right: 50 px;
-            }
-            h1 {
-                clear: both; /* Ensures the title doesn't overlap with floated elements */
+                padding-right: 50px;
             }
         </style>
     </head>
-    <body>
-    <table>
-    <tbody>
-        <tr>
-            <!-- Kanbas Navigation -->
-            <td>
-                <ul>
-                    <li>
-                        <a href="/Kanbas/Account/Profile/screen.html">Account</a>
-                    </li>
-                    <li>
-                        <!-- <a href="/Kanbas/Dashboard/screen.html">Dashboard</a> -->
-                        <a href="#">Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="/Kanbas/Courses/Home/screen.html">Courses</a>
-                    </li>
-                    <li>
-                        <!-- <a href="/Kanbas/Calendar/index.html">Calendar</a> -->
-                        <a href="#">Calendar</a>
-                    </li>
-                    <li>
-                        <!-- <a href="/Kanbas/Inbox/index.html">Inbox</a> -->
-                        <a href="#">Inbox</a>
-                    </li>
-                    <li>
-                        <!-- <a href="/Kanbas/History/index.html">History</a> -->
-                        <a href="#">History</a>
-                    </li>
-                    <li>
-                        <!-- <a href="/Kanbas/Studio/index.html">Studio</a> -->
-                        <a href="#">Studio</a>
-                    </li>
-                    <li>
-                        <!-- <a href="/Kanbas/Commons/index.html">Commons</a> -->
-                        <a href="#">Commons</a>
-                    </li>
-                    <li>
-                        <!-- <a href="/Kanbas/Help/index.html">Help</a> s-->
-                        <a href="#">Help</a>
-                    </li>
-                </ul>  
-            </td>
 
-            <!-- Account Navigation -->
-            <td>
-                <ul>
+    <body>
+        <div class="wd-grid-row" style="clear: both;">
+            <div class="wd-grid-col-kanbas-nav" style="width: 80px; float: left;">
+                <ul  class="wd-kanbas-navigation">
+                    <li><a href="http://northeastern.edu"><i class="fa-solid fa-n" style="font-size: xxx-large;"></i></a></li>
+                    <li class="wd-active-profile">
+                        <a href="/Kanbas/Account/Profile/screen.html">
+                            <i class="fa-regular fa-circle-user account"></i>Account</a>
+                    </li>
+                    <li >
+                        <a href="/Kanbas/Dashboard/screen.html">
+                            <i class="fa fa-tachometer"></i>Dashboard</a>
+                    </li>
                     <li>
-                        <!-- <a href="/Kanbas/Account/Navigation/index.html">Notification</a> -->
+                        <a href="/Kanbas/Courses/Home/screen.html">
+                            <i class="fa-solid fa-book"></i>Courses</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-sharp fa-regular fa-calendar-days"></i>Calendar</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-inbox"></i>  Inbox</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-regular fa-clock"></i>History</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-solid fa-tv"></i>Studio</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Commons</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-regular fa-circle-question"></i><br/>Help</a>
+                    </li>
+                </ul>
+            </div>
+
+            <nav style="--bs-breadcrumb-divider: '>'; padding-top: 20px;" aria-label="breadcrumb">
+                <ol class="breadcrumb" style="background-color: white;">
+                    <li class="navbar-icon">
+                        <a href="../kanbas.html">
+                            <i class="fa fa-bars" style="color: red; padding-left: 20px;" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item" style="color: red; padding-left: 20px;">
+                        Account
+                    </li>
+                    <li class="breadcrumb-item" aria-current="page">
+                        Profile
+                    </li> 
+                </ol>
+            </nav>
+            <hr>
+
+            <div class="wd-grid-col-course-nav" style="width: 170px; float: left;">
+                <ul class="wd-navigation">
+                    <li>
                         <a href="#">Notification</a>
                     </li>
-                    <li>
+                    <li class="wd-active">
                         <a href="/Kanbas/Account/Profile/screen.html">Profile</a>
                     </li>
                     <li>
-                        <!-- <a href="/Kanbas/Account/Files/index.html">Files</a> -->
                         <a href="#">Files</a>
                     </li>
                     <li>
-                        <!-- <a href="/Kanbas/Account/Settings/index.html">Settings</a> -->
                         <a href="#">Settings</a>
                     </li>
                     <li>
-                        <!-- <a href="/Kanbas/Account/ePortfolios/index.html">ePortfolios</a> -->
                         <a href="#">ePortfolios</a>
                     </li>
                     <li>
-                        <!-- <a href="/Kanbas/Account/SharedContent/index.html">Shared Content</a> -->
                         <a href="#">Shared Content</a>
                     </li>
                     <li>
-                        <!-- <a href="/Kanbas/Account/TheHub/index.html">The Hub</a> -->
                         <a href="#">The Hub</a>
                     </li>
                     <li>
-                        <!-- <a href="/Kanbas/Account/QwicklyCourseTools/index.html">Qwickly Course Tools</a> -->
                         <a href="#">Qwickly Course Tools</a>
                     </li>
                     <li>
-                        <!-- <a href="GlobalAnnouncements">Global Announcements</a> -->
                         <a href="#">Global Announcements</a>
                     </li>
-                </ul>
-            </td>
+                </ul>   
+            </div>
 
-            <!-- Profile -->
-            <td>
-                <div>
-                    <p>Jose Annunziato's profile</p>
-                    <hr>
+            <div class="wd-grid-col-grades">
+                <div class="wd-flex-grow-1">
+                    <div>
+                        <p>Jose Annunziato's profile</p>
+                        <hr>
+                    </div>
+                
+                    <h1>Jose Annunziato</h1>
+                
+                    <div class="edit-profile">
+                        <a href="/Kanbas/Account/Profile/Edit/screen.html">
+                            <button>Edit Profile</button>
+                        </a>
+                    </div>
+                
+                    <h2>Contact</h2>
+                    <p>No registered services, you can add some on the <a href="/Kanbas/Account/Settings/index.html">settings</a> page.</p>
+                
+                    <h2>Biography</h2>
+                    <p>Faculty, Software Engineer, AI, Space, and renewables enthusiast.</p>
+                
+                    <h2>Links</h2>
+                    <a href="https://www.youtube.com" target="_blank">YouTube</a>     
                 </div>
-            
-                <h1>Jose Annunziato</h1>
-            
-                <div class="edit-profile">
-                    <a href="/Kanbas/Account/Profile/Edit/screen.html">
-                        <button>Edit Profile</button>
-                    </a>
-                </div>
-            
-                <h2>Contact</h2>
-                <p>No registered services, you can add some on the <a href="/Kanbas/Account/Settings/index.html">settings</a> page.</p>
-            
-                <h2>Biography</h2>
-                <p>Faculty, Software Engineer, AI, Space, and renewables enthusiast.</p>
-            
-                <h2>Links</h2>
-                <a href="https://www.youtube.com" target="_blank">YouTube</a>            
-            </td>
-        </tr>
-    </tbody>
-    </table>
+
+            </div>
+        </div>
     </body>
+
 </html>

@@ -14,6 +14,17 @@
   .wd-kanbas-navigation li.wd-active a {
     color: red;
   }
+
+  .wd-kanbas-navigation li.wd-active-profile {
+    background-color: white;
+  }
+  .wd-kanbas-navigation li.wd-active-profile a {
+    color: red;
+  }
+  .wd-kanbas-navigation li.wd-active-profile a i {
+    color: red;
+  }
+
   .wd-kanbas-navigation a {
     color: white;
     text-decoration: none;
@@ -28,4 +39,8 @@
     color: white;
     font-size: 2em;
     margin-bottom: 5px;
+  }
+
+  .modal li a {
+    color: red;
   }
