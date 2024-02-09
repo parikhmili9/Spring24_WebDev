@@ -4,19 +4,34 @@ import './App.css';
 
 function App() {
   return (
+    
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
+        <h1>Web Devlopment Couse - Mili Parikh</h1>
         <a
           className="App-link"
-          href="/Kanbas/Account/Profile/screen.html"
+          href="/labs/a1/index.html"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Go to Kanbas
+          Assignment 1
+        </a>
+        <a
+          className="App-link"
+          href="/labs/a2/index.html"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Assignment 2
+        </a>
+        <a
+          className="App-link"
+          href="/Kanbas/Dashboard/screen.html"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Kanbas project
         </a>
       </header>
     </div>
