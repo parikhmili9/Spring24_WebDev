@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import db from "../Database";
 import "./index.css";
@@ -16,7 +15,7 @@ function Dashboard() {
             <div key={course._id} className="col" style={{ width: 300 }}>
                 <div className="card">
                     <img src={`/images/${course.image}`} className="card-img-top"
-                        alt={`Course Image - ${course.name}`} style={{ height: 150 }}/>
+                        alt={`React - ${course.name}`} style={{ height: 150 }}/>
                     <div className="card-body">
                         <Link className="card-title" to={`/Kanbas/Courses/${course._id}/Home`}
                             style={{ textDecoration: "none", color: "navy", fontWeight: "bold" }}>

@@ -1,7 +1,5 @@
-import React from 'react'
-import { useParams, useLocation} from 'react-router-dom'
+import { useLocation} from 'react-router-dom'
 import '../index.css'
-import db from '../Database'
 import { FaBars } from 'react-icons/fa'
 
 interface BreadcrumbStyle {
@@ -34,7 +32,7 @@ const BreadcrumbCust = () => {
              aria-label='breadcrumb'>
         <ol className='breadcrumb'>
             <li className='breadcrumb-item'>
-                <a href='#' style={{ textDecoration: 'none', color: 'red', fontSize: '15px'}}>
+                <a href='#top' style={{ textDecoration: 'none', color: 'red', fontSize: '15px'}}>
                     <FaBars style={{ marginRight: '10px', fontSize: '20px' }} />
                     CS5200.MERGED.202330
                 </a>
