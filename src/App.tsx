@@ -11,7 +11,7 @@ import {Routes, Route, Navigate} from "react-router";
 function App() {
   return (
     <HashRouter>
-      <div className="container">
+      <div>
         <Routes>
           <Route path="/"         element={<Navigate to="/Labs"/>}/>
           <Route path="/Labs/*"   element={<Labs/>}/>

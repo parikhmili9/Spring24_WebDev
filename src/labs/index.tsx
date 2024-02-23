@@ -2,21 +2,9 @@ import { Routes, Route, Link } from "react-router-dom";
 import Assignment3 from "./a3";
 import Nav from "../Nav";
 
-// function Labs() {
-//     return (
-//        <div>
-//          {/* <Link to="/Labs/a3">A3</Link> |
-//          <Link to="/Kanbas">Kanbas</Link> |
-//          <Link to="/HelloWorld">Hello</Link> | */}
-//          <Nav/>
-//          <Assignment3/>
-//        </div>
-//     );
-//  }
-
 function Labs() {
    return (
-     <div className="container-fluid">
+     <div className="container-fluid" style={{margin: "20px"}}>
          <Nav />
          <h1>Labs</h1>
          <Link to="/Labs/a3">Assignment 3</Link> |
@@ -28,6 +16,6 @@ function Labs() {
      </div>
    );
  }
- export default Labs;
+export default Labs;
  
  
