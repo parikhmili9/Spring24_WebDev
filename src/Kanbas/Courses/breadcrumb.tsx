@@ -1,9 +1,8 @@
 import React from 'react'
-import { useParams, Routes, Route, Navigate, useLocation} from 'react-router-dom'
+import { useParams, useLocation} from 'react-router-dom'
 import '../index.css'
 import db from '../Database'
 import { FaBars } from 'react-icons/fa'
-import { BiGlassesAlt } from 'react-icons/bi'
 
 interface BreadcrumbStyle {
   '--bs-breadcrumb-divider'?: string;
@@ -14,10 +13,11 @@ interface BreadcrumbStyle {
 }
 
 const BreadcrumbCust = () => {
-  const { courseId } = useParams()
+  // const { courseId } = useParams()
   const { pathname } = useLocation()
-  const [empty, kanbas, courses, id, screen] = pathname.split('/')
-  const course = db.courses
+  const [screen] = pathname.split('/')
+  // const [empty, kanbas, courses, id, screen] = pathname.split('/')
+  // const course = db.courses
 
   const breadcrumbStyle: BreadcrumbStyle = {
     '--bs-breadcrumb-divider': "url('data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" width=\"8\" height=\"8\"%3E%3Cpath d=\"M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z\" fill=\"%236c757d\"/%3E%3C/svg%3E')",
