@@ -13,8 +13,7 @@ interface BreadcrumbStyle {
 const BreadcrumbCust = () => {
   // const { courseId } = useParams()
   const { pathname } = useLocation()
-  const [screen] = pathname.split('/')
-  // const [empty, kanbas, courses, id, screen] = pathname.split('/')
+  const [empty, kanbas, courses, id, screen] = pathname.split('/')
   // const course = db.courses
 
   const breadcrumbStyle: BreadcrumbStyle = {
@@ -27,6 +26,9 @@ const BreadcrumbCust = () => {
 
   return (
     <div>
+      <div style={{display: 'none'}}>
+        <p>{empty}, {kanbas}, {courses}, {id}</p>
+      </div>
       <i className='fa fa-bars ' aria-hidden='true'>
       <nav style={breadcrumbStyle} 
              aria-label='breadcrumb'>
