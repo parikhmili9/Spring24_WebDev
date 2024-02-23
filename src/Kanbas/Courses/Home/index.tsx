@@ -62,16 +62,16 @@ function Home () {
             </ul>
           <hr />
           <h3>Course Status</h3>
-          <a href='#'>View Calander</a>
+          <a href='##top'>View Calander</a>
           <ul className='navigation'>
             <li>
-              <a href='#'>Lecture at 11:30pm</a>
+              <a href='#top'>Lecture at 11:30pm</a>
             </li>
             <li>
-              <a href='#'>Lecture at 11:30pm</a>
+              <a href='#top'>Lecture at 11:30pm</a>
             </li>
             <li>
-              <a href='#'>Lecture at 11:30pm</a>
+              <a href='#top'>Lecture at 11:30pm</a>
             </li>
           </ul>
         </div>
