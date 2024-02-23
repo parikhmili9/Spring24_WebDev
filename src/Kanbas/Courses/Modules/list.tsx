@@ -23,13 +23,13 @@ function ModuleList() {
                 </button>
                 <ul className='dropdown-menu'>
                     <li>
-                        <a className='dropdown-item' href="#">
+                        <a className='dropdown-item' href="#top">
                             Action
                         </a>
-                        <a className='dropdown-item' href="#">
+                        <a className='dropdown-item' href="#top">
                             Another Action
                         </a>
-                        <a className='dropdown-item' href="#">
+                        <a className='dropdown-item' href="#top">
                             One more Action
                         </a>
                     </li>
