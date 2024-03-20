@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes} from "react-router-dom";
+import { Navigate, Route, Routes, useParams} from "react-router-dom";
 import CourseNavigation from "./Navigation";
 import Breadcrumb from "./breadcrumb";
 import Modules from "./Modules";
@@ -7,10 +7,14 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/Editor";
 import Grades from "./Grades";
 
-function Courses() {
+function Courses({ courses }: { courses: any[]; }) {
   // const { courseId } = useParams();
   // const {pathname} = useLocation();
   // const course = db.courses.find((course) => course._id === courseId);
+
+  const { courseId } = useParams();
+  const course = courses.find((course) => course._id === courseId);
+
   return (
     <div>
       <div>
