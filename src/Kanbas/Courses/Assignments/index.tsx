@@ -1,13 +1,33 @@
-import React from "react";
+import React, {useState} from "react";
 import { FaCheckCircle, FaEllipsisV, FaPlusCircle } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
 import db from "../../Database";
 import { HiPlusSm } from "react-icons/hi";
+import AssignmentEditor from "./Editor";
+import { useDispatch, useSelector } from "react-redux";
+import { addAssignment, updateAssignment, deleteAssignment, selectAssignment } from "./assignmentReducer";
+import { KanbasState } from "../../store";
+
 function Assignments() {
   const { courseId } = useParams();
   const assignments = db.assignments;
-  const assignmentList = assignments.filter(
-    (assignment) => assignment.course === courseId);
+
+  // const assignmentList = assignments.filter((assignment) => assignment.course === courseId);
+  const assignmentList = useSelector((state: KanbasState) => state.assignmentReducer.assignments);
+  const assignment = useSelector((state: KanbasState) => state.assignmentReducer.assignment);
+
+  const dispatch = useDispatch();
+
+  // const newAssignment = {
+  //   title: "New Title",
+  //   course: courseId,
+  //   description: "New Description",
+  //   points: "100",
+  //   dueDate: "2024-03-21",
+  //   availableFromDate: "2024-02-21",
+  //   availableUntilDate: "2024-03-30",
+  // }
+  
   return (
     <div>
       <div className="wd-new-container" style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
@@ -19,11 +39,18 @@ function Assignments() {
             <HiPlusSm style={{color: 'black', marginBottom: '4px'}}/>
             Group
           </button>
+
           <button style={{backgroundColor: 'red', color: 'white', marginLeft: '10px'}}>
-            <i className="fa fa-plus" aria-hidden="true" style={{marginRight: '5px'}}/>
-            <HiPlusSm style={{color: 'white', marginBottom: '4px'}}/>
-            Assigment
+            <Link key={new Date().getTime().toString()}
+              to={`/Kanbas/Courses/${courseId}/Assignments/new`}
+              className="list-group-item"
+              style={{display: "block", width: "100%"}}
+              onClick={() => dispatch(addAssignment({...assignment, course: courseId}))}> 
+                <HiPlusSm style={{color: 'white', marginBottom: '4px'}}/>
+                Assigment
+              </Link>
           </button>
+
           <button className="btn" style={{marginLeft: '10px'}}>
             <FaEllipsisV/>
           </button>
@@ -42,14 +69,35 @@ function Assignments() {
             </span>
           </div>
           <ul className="list-group" style={{margin: '8px'}}>
+            {
+              assignmentList.length === 0 ? (
+                <div className="list-group-item">
+                  <span className="text-muted">No assignments</span>
+                </div>
+              ) : null
+            }
+
             {assignmentList.map((assignment) => (
               <li className="list-group-item">
                 <FaEllipsisV className="me-2" />
-                <Link to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}>
-                  {assignment.title}
+                <Link key={assignment._id} to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
+                  onClick={() => dispatch(selectAssignment(assignment))}>
+                  <span className="ms-3">{assignment.title}</span>
                 </Link>
                 <span className="float-end">
-                  <FaCheckCircle className="text-success" /><FaEllipsisV className="ms-2" /></span>
+                  <FaCheckCircle className="text-success" />
+                  <FaEllipsisV className="ms-2" />
+                  <button className="btn btn-danger"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const confirmDelete = window.confirm("Are you sure?");
+                      if(confirmDelete){
+                        dispatch(deleteAssignment(assignment._id));
+                      }
+                    }}>
+                    Delete
+                  </button>
+                </span>
               </li>))}
           </ul>
         </li>
