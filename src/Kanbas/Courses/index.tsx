@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes, useParams} from "react-router-dom";
+import { Navigate, Route, Routes} from "react-router-dom";
 import CourseNavigation from "./Navigation";
 import Breadcrumb from "./breadcrumb";
 import Modules from "./Modules";
