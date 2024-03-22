@@ -17,7 +17,7 @@ function ModuleList() {
     const dispatch = useDispatch();
 
     //Getting modules from database
-    const modules = db.modules;
+    // const modules = db.modules;
 
 
     // const modulesList = modules.filter((module) => module.course === courseId);

@@ -1,4 +1,3 @@
-import { useDispatch } from "react-redux";
 import { deleteTodo, setTodo } from "./todosReducer";
 
 function TodoItem({ todo}: {

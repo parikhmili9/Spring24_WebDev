@@ -12,8 +12,8 @@ function Courses({ courses }: { courses: any[]; }) {
   // const {pathname} = useLocation();
   // const course = db.courses.find((course) => course._id === courseId);
 
-  const { courseId } = useParams();
-  const course = courses.find((course) => course._id === courseId);
+  // const { courseId } = useParams();
+  // const course = courses.find((course) => course._id === courseId);
 
   return (
     <div>
