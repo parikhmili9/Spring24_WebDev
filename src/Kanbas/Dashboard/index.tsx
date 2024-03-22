@@ -44,24 +44,27 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
   return (
     <div className="p-4" style={{marginLeft: 40}}>
       <h1>Dashboard</h1>
-      <h5>Course</h5>
-      <input value={course.name} className="form-control" 
-        onChange={(e) => setCourse({ ...course, name: e.target.value }) } />
-      <input value={course.number} className="form-control" 
-        onChange={(e) => setCourse({ ...course, number: e.target.value }) } />
-      <input value={course.startDate} className="form-control" type="date" 
-        onChange={(e) => setCourse({ ...course, startDate: e.target.value }) }/>
-      <input value={course.endDate} className="form-control" type="date" 
-        onChange={(e) => setCourse({ ...course, endDate: e.target.value }) }/>
       <br/>
-      <button className="btn btn-success" onClick={addNewCourse} >
-        Add
-      </button>
-      <span/>
-      <button className="btn btn-warning" onClick={updateCourse} >
-        Update
-      </button>
-  
+      <br/>
+      <h5>Course Editor</h5>
+      <div style={{width: '50%'}}>
+        <input value={course.name} className="form-control" 
+          onChange={(e) => setCourse({ ...course, name: e.target.value }) } />
+        <input value={course.number} className="form-control" 
+          onChange={(e) => setCourse({ ...course, number: e.target.value }) } />
+        <input value={course.startDate} className="form-control" type="date" 
+          onChange={(e) => setCourse({ ...course, startDate: e.target.value }) }/>
+        <input value={course.endDate} className="form-control" type="date" 
+          onChange={(e) => setCourse({ ...course, endDate: e.target.value }) }/>
+        <br/>
+        <button className="btn btn-success" onClick={addNewCourse} >
+          Add
+        </button>
+        <span/>
+        <button className="btn btn-warning" onClick={updateCourse} >
+          Update
+        </button>
+      </div>
 
       <hr />
       <h2>Published Courses ({courses.length})</h2> 

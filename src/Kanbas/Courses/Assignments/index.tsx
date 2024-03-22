@@ -17,7 +17,6 @@ function Assignments() {
 
   const newAssignment = {
     title: "New Title",
-    course: courseId,
     description: "New Description",
     points: "100",
     dueDate: "2024-03-21",
@@ -83,9 +82,9 @@ function Assignments() {
                 <FaEllipsisV className="me-2" />
                 <Link key={assignment._id} to={`/Kanbas/Courses/${courseId}/Assignments/${assignmentUp._id}`}
                   onClick={() => dispatch(selectAssignment(assignment))}>
-                  <span className="ms-3">{assignment.title}</span>
+                  <span>{assignment.title}</span>
                 </Link>
-                <span className="float-end">
+                <span className="float-end" style={{alignItems: 'center'}}>
                   <FaCheckCircle className="text-success" />
                   <FaEllipsisV className="ms-2" />
                   <button className="btn btn-danger"
@@ -98,6 +97,10 @@ function Assignments() {
                     }}>
                     Delete
                   </button>
+                </span>
+                <br/>
+                <span style={{marginLeft: '30px'}}>
+                  {assignment.description} | Due: {assignment.dueDate} | Points: {assignment.points}
                 </span>
               </li>))}
           </ul>

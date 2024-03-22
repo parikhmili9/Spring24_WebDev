@@ -1,17 +1,6 @@
 [
     { "_id": "A101", "title": "Assignment1", "course": "RS101",
-     "description": "Just another boring Assignement", "points": "100", 
-     "dueDate": "3-21-2024", "availableFromDate": "2-21-2024", "availableUntilDate": "4-21-2024"},
-     { "_id": "A101", "title": "Assignment2", "course": "RS102",
-     "description": "Just another boring Assignement", "points": "100", 
-     "dueDate": "3-21-2024", "availableFromDate": "2-21-2024", "availableUntilDate": "4-21-2024"},
-     { "_id": "A101", "title": "Assignment3", "course": "RS103",
-     "description": "Just another boring Assignement", "points": "100", 
-     "dueDate": "3-21-2024", "availableFromDate": "2-21-2024", "availableUntilDate": "4-21-2024"},
-     { "_id": "A101", "title": "Assignment4", "course": "RS104",
-     "description": "Just another boring Assignement", "points": "100", 
-     "dueDate": "3-21-2024", "availableFromDate": "2-21-2024", "availableUntilDate": "4-21-2024"},
-     { "_id": "A101", "title": "Assignment5", "course": "RS105",
-     "description": "Just another boring Assignement", "points": "100", 
-     "dueDate": "3-21-2024", "availableFromDate": "2-21-2024", "availableUntilDate": "4-21-2024"}
-  ]
+     "description": "Just another boring Assignment", "points": "100", 
+     "dueDate": "2024-03-21", "availableFromDate": "2024-02-21", "availableUntilDate": "2024-03-22"
+    }
+]
