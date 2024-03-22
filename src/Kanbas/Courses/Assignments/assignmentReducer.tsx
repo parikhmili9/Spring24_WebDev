@@ -5,8 +5,15 @@ const assignments = db.assignments;
 
 const initialState = {
   assignments: assignments,
-  assignment: { title: 'New Assignment title' }
-}
+  assignment: { 
+    title: 'New Assignment title',
+    course: 'Course',
+    description: "Another assignment",
+    points: '100',
+    dueDate: '2024-03-21',
+    availableFromDate: '2024-02-21',
+    availableToDate: '2024-04-21'},
+};
 
 const assignmentsSlice = createSlice({
   name: "assignments",
@@ -37,7 +44,7 @@ const assignmentsSlice = createSlice({
       state.assignment = action.payload
     }
   }
-})
+});
 
 export const { addAssignment, deleteAssignment, updateAssignment, selectAssignment} = assignmentsSlice.actions
 export default assignmentsSlice.reducer

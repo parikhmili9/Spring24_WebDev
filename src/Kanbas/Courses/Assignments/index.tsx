@@ -1,32 +1,29 @@
-import React, {useState} from "react";
 import { FaCheckCircle, FaEllipsisV, FaPlusCircle } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
-import db from "../../Database";
 import { HiPlusSm } from "react-icons/hi";
-import AssignmentEditor from "./Editor";
 import { useDispatch, useSelector } from "react-redux";
-import { addAssignment, updateAssignment, deleteAssignment, selectAssignment } from "./assignmentReducer";
+import { deleteAssignment, selectAssignment } from "./assignmentReducer";
 import { KanbasState } from "../../store";
 
 function Assignments() {
   const { courseId } = useParams();
-  const assignments = db.assignments;
+  // const assignments = db.assignments;
 
   // const assignmentList = assignments.filter((assignment) => assignment.course === courseId);
   const assignmentList = useSelector((state: KanbasState) => state.assignmentReducer.assignments);
-  const assignment = useSelector((state: KanbasState) => state.assignmentReducer.assignment);
+  const assignmentUp = useSelector((state: KanbasState) => state.assignmentReducer.assignment);
 
   const dispatch = useDispatch();
 
-  // const newAssignment = {
-  //   title: "New Title",
-  //   course: courseId,
-  //   description: "New Description",
-  //   points: "100",
-  //   dueDate: "2024-03-21",
-  //   availableFromDate: "2024-02-21",
-  //   availableUntilDate: "2024-03-30",
-  // }
+  const newAssignment = {
+    title: "New Title",
+    course: courseId,
+    description: "New Description",
+    points: "100",
+    dueDate: "2024-03-21",
+    availableFromDate: "2024-02-21",
+    availableUntilDate: "2024-03-30",
+  }
   
   return (
     <div>
@@ -45,7 +42,8 @@ function Assignments() {
               to={`/Kanbas/Courses/${courseId}/Assignments/new`}
               className="list-group-item"
               style={{display: "block", width: "100%"}}
-              onClick={() => dispatch(addAssignment({...assignment, course: courseId}))}> 
+              onClick={() => dispatch(selectAssignment(newAssignment))}>
+              {/* onClick={() => dispatch(addAssignment({...assignment, course: courseId}))}>  */}
                 <HiPlusSm style={{color: 'white', marginBottom: '4px'}}/>
                 Assigment
               </Link>
@@ -69,6 +67,7 @@ function Assignments() {
             </span>
           </div>
           <ul className="list-group" style={{margin: '8px'}}>
+            {/* If there are no assignments in database */}
             {
               assignmentList.length === 0 ? (
                 <div className="list-group-item">
@@ -77,10 +76,12 @@ function Assignments() {
               ) : null
             }
 
-            {assignmentList.map((assignment) => (
-              <li className="list-group-item">
+            {/* Displaying list of assignments from database */}
+            {assignmentList.filter((assignment) => assignment.course === courseId)
+            .map((assignment, index) => (
+              <li key={index} className="list-group-item">
                 <FaEllipsisV className="me-2" />
-                <Link key={assignment._id} to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
+                <Link key={assignment._id} to={`/Kanbas/Courses/${courseId}/Assignments/${assignmentUp._id}`}
                   onClick={() => dispatch(selectAssignment(assignment))}>
                   <span className="ms-3">{assignment.title}</span>
                 </Link>

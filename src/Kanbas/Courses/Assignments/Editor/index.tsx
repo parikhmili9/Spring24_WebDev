@@ -1,38 +1,35 @@
-import React from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import db from "../../../Database";
 import "./../index.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addAssignment, selectAssignment, updateAssignment } from "../assignmentReducer";
+import { KanbasState } from "../../../store";
 
 function AssignmentEditor() {
   const { assignmentId, courseId } = useParams();
-  const assignments = db.assignments;
-  const assignment = assignments.find(
-    (assignment) => assignment._id === assignmentId);
+  // const assignments = db.assignments;
+  // const assignment = assignments.find(
+  //   (assignment) => assignment._id === assignmentId);
+
+  const assignment = useSelector((state: KanbasState) => state.assignmentReducer.assignment);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  // const handleSave = () => {
-  //   console.log("Actually saving assignment TBD in later assignments");
-  //   navigate(`/Kanbas/Courses/${courseId}/Assignments`);
-  // };
 
   const handleSave = () => {
     if(assignmentId === "new") {
-      const newAssignment = {
-        ...assignment,
-        _id: new Date().getTime().toString(),
-      };
-      dispatch(addAssignment(newAssignment));
+      // const newAssignment = {
+      //   ...assignment,
+      //   _id: new Date().getTime().toString(),
+      // };
+      dispatch(addAssignment({...assignment, course: courseId}));
     }
     else {
       dispatch(updateAssignment(assignment));
     }
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
-  
 
   return (
     <div style={{margin: '40px'}}>
@@ -70,7 +67,7 @@ function AssignmentEditor() {
                           <b>Due</b>
                       </label>
                       <br/>
-                      <input className="form-control-c" type="datetime-local"
+                      <input className="form-control-c" type="date"
                           style= {{margin: '10px', width: '95%'}}
                           value={assignment?.dueDate}
                           onChange={(e) => dispatch(selectAssignment({...assignment, dueDate: e.target.value}))} />
@@ -84,13 +81,13 @@ function AssignmentEditor() {
                       <br/>
                       <input
                           className="form-control-c"
-                          type="datetime-local"
+                          type="date"
                           style= {{margin: '10px', width:'45%'}}
                           value={assignment?.availableFromDate}
                           onChange={(e) => dispatch(selectAssignment({...assignment, availableFromDate: e.target.value}))} />
                       <input
                           className="form-control-c"
-                          type="datetime-local"
+                          type="date"
                           style= {{margin: '10px', width: '45%'}}
                           value={assignment?.availableUntilDate}
                           onChange={(e) => dispatch(selectAssignment({...assignment, availableUntilDate: e.target.value}))} />

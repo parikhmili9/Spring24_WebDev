@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "./index.css";
 import db from "../../Database";
 import { FaEllipsisV, FaCheckCircle, FaPlusCircle } from "react-icons/fa";
