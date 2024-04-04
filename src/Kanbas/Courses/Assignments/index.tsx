@@ -2,13 +2,35 @@ import { FaCheckCircle, FaEllipsisV, FaPlusCircle } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
 import { HiPlusSm } from "react-icons/hi";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteAssignment, selectAssignment } from "./assignmentReducer";
+import { addAssignment, deleteAssignment, selectAssignment, setAssignments } from "./assignmentReducer";
 import { KanbasState } from "../../store";
+import { useEffect } from "react";
+import * as client from "./client";
 
 function Assignments() {
   const { courseId } = useParams();
-  // const assignments = db.assignments;
 
+  useEffect(() => {
+    client.findAssignmentsForCourse(courseId)
+      .then((assignments) =>
+        dispatch(setAssignments(assignments))
+    );
+  }, [courseId]);   
+
+  const handleAddAssignment = () => {
+    client.createAssignment(courseId, assignmentUp).then((assignment) => {
+        dispatch(addAssignment(assignment));
+    });
+  };
+
+  const handleDeleteAssignment = (assignmentId: string) => {
+    client.deleteAssignment(assignmentId).then((status) => {
+      dispatch(deleteAssignment(assignmentId));
+    });
+  };
+  
+
+  // const assignments = db.assignments;
   // const assignmentList = assignments.filter((assignment) => assignment.course === courseId);
   const assignmentList = useSelector((state: KanbasState) => state.assignmentReducer.assignments);
   const assignmentUp = useSelector((state: KanbasState) => state.assignmentReducer.assignment);
@@ -41,7 +63,7 @@ function Assignments() {
               to={`/Kanbas/Courses/${courseId}/Assignments/new`}
               className="list-group-item"
               style={{display: "block", width: "100%"}}
-              onClick={() => dispatch(selectAssignment(newAssignment))}>
+              onClick={handleAddAssignment}>
               {/* onClick={() => dispatch(addAssignment({...assignment, course: courseId}))}>  */}
                 <HiPlusSm style={{color: 'white', marginBottom: '4px'}}/>
                 Assigment
@@ -92,7 +114,7 @@ function Assignments() {
                       e.preventDefault();
                       const confirmDelete = window.confirm("Are you sure?");
                       if(confirmDelete){
-                        dispatch(deleteAssignment(assignment._id));
+                        handleDeleteAssignment(assignment._id);
                       }
                     }}>
                     Delete

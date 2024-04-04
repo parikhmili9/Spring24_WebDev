@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useDispatch, useSelector } from "react-redux";
 import { addAssignment, selectAssignment, updateAssignment } from "../assignmentReducer";
 import { KanbasState } from "../../../store";
+import * as client from ".././client";
 
 function AssignmentEditor() {
   const { assignmentId, courseId } = useParams();
@@ -17,7 +18,8 @@ function AssignmentEditor() {
   const dispatch = useDispatch();
 
 
-  const handleSave = () => {
+  const handleSave = async () => {
+    const status = await client.updateAssignment(assignment);
     if(assignmentId === "new") {
       // const newAssignment = {
       //   ...assignment,
