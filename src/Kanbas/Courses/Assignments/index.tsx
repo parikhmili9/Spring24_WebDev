@@ -9,13 +9,14 @@ import * as client from "./client";
 
 function Assignments() {
   const { courseId } = useParams();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     client.findAssignmentsForCourse(courseId)
       .then((assignments) =>
         dispatch(setAssignments(assignments))
     );
-  }, [courseId]);   
+  }, [courseId, dispatch]);   
 
   const handleAddAssignment = () => {
     client.createAssignment(courseId, assignmentUp).then((assignment) => {
@@ -28,14 +29,12 @@ function Assignments() {
       dispatch(deleteAssignment(assignmentId));
     });
   };
-  
+
 
   // const assignments = db.assignments;
   // const assignmentList = assignments.filter((assignment) => assignment.course === courseId);
   const assignmentList = useSelector((state: KanbasState) => state.assignmentReducer.assignments);
   const assignmentUp = useSelector((state: KanbasState) => state.assignmentReducer.assignment);
-
-  const dispatch = useDispatch();
 
   const newAssignment = {
     title: "New Title",

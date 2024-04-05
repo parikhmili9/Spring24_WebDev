@@ -1,0 +1,18 @@
+{
+    "overrides": [
+      {
+        "files": [
+            "src/Kanbas/Courses/Assignments/Editor/index.tsx",
+            "src/Kanbas/Courses/Assignments/client.ts",
+            "src/Kanbas/Courses/Assignments/index.tsx",
+            "src/Kanbas/Courses/Modules/list.tsx",
+            "src/Kanbas/Courses/index.tsx",
+            "src/Kanbas/index.tsx"
+        ],
+        "rules": {
+          "@typescript-eslint/no-unused-vars": "off",
+          "dot-location": "off"
+        }
+      }
+    ]
+}  

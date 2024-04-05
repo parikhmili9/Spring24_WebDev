@@ -13,14 +13,13 @@ function EncodingParametersInURLs() {
     setB(parseInt(e.target.value));
   };
 
-  const [welcome, setWelcome] = useState("");
-
-  const fetchWelcome = async () => {
-    const response = await axios.get("http://localhost:4000/a5/welcome");
-    setWelcome(response.data);
-  };
+  // const [welcome, setWelcome] = useState("");
+  // const fetchWelcome = async () => {
+  //   const response = await axios.get("http://localhost:4000/a5/welcome");
+  //   setWelcome(response.data);
+  // };
   useEffect(() => {
-    fetchWelcome();
+    // fetchWelcome();
   }, []);
 
   const [result, setResult] = useState(0);
@@ -30,7 +29,7 @@ function EncodingParametersInURLs() {
       axios.get(`http://localhost:4000/a5/add/${a}/${b}`);
     setResult(response.data);
   };
-  
+
   const fetchSubtraction = async (a: number, b: number) => {
     const response = await axios.get(
       `http://localhost:4000/a5/subtract/${a}/${b}`);
@@ -44,7 +43,7 @@ function EncodingParametersInURLs() {
 
       <h4>Integrating React with APIs</h4>
       <h5>Fetching Welcome</h5>
-      <h6>{welcome}</h6>
+      {/* <h6>{welcome}</h6> */}
 
       <h4>Calculator</h4>
       <input type="number" value={a}

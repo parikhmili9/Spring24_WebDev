@@ -5,20 +5,21 @@ import { useParams } from "react-router";
 import { useSelector, useDispatch } from "react-redux";
 import { addModule, deleteModule, updateModule, setModule, setModules} from "./moduleReducer";
 import { KanbasState } from "../../store";
-import React, { useEffect, useState } from "react";
+import { useEffect } from "react";
 import * as client from "./client";
 // import { findModulesForCourse, createModule } from "./client";
 
 
 function ModuleList() {
     const { courseId } = useParams();
+    const dispatch = useDispatch();
 
     useEffect(() => {
         client.findModulesForCourse(courseId)
           .then((modules) =>
             dispatch(setModules(modules))
         );
-    }, [courseId]);   
+    }, [courseId, dispatch]);   
     
     const handleAddModule = () => {
         client.createModule(courseId, module).then((module) => {
@@ -43,7 +44,6 @@ function ModuleList() {
         state.modulesReducer.modules);
     const module = useSelector((state: KanbasState) => 
         state.modulesReducer.module);
-    const dispatch = useDispatch();
 
     //Getting modules from database
     // const modules = db.modules;
