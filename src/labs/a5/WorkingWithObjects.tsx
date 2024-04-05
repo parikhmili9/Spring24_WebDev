@@ -15,8 +15,9 @@ function WorkingWithObjects() {
     course: "RS101",
   });
 
-  const ASSIGNMENT_URL = "http://localhost:4000/a5/assignment";
-  const MODULE_URL = "http://localhost:4000/a5/module";
+  const ASSIGNMENT_URL = "https://kanbas-node-server-app-jy0a.onrender.com/a5/assignment";
+  const MODULE_URL = "https://kanbas-node-server-app-jy0a.onrender.com/a5/module";
+  const RENDER_SERVER_URL = "https://kanbas-node-server-app-jy0a.onrender.com";
 
   const fetchAssignment = async () => {
     const response = await axios.get(`${ASSIGNMENT_URL}`);
@@ -27,28 +28,28 @@ function WorkingWithObjects() {
       .get(`${ASSIGNMENT_URL}/title/${assignment.title}`);
     setAssignment(response.data);
   };
-  // useEffect(() => {
-  //   fetchAssignment();
-  // }, []);
+  useEffect(() => {
+    fetchAssignment();
+  }, []);
 
   return (
     <div>
       <h3>Working With Objects</h3>
       <h4>Retrieving Objects</h4>
-      <a className="btn btn-primary" href="http://localhost:4000/a5/assignment">
+      <a className="btn btn-primary" href="https://kanbas-node-server-app-jy0a.onrender.com/a5/assignment">
         Get Assignment
       </a>
       <span>  </span>
-      <a className="btn btn-primary" href="http://localhost:4000/a5/module">
+      <a className="btn btn-primary" href="https://kanbas-node-server-app-jy0a.onrender.com/a5/module">
         Get Module
       </a>
 
       <h4>Retrieving Properties</h4>
-      <a className="btn btn-primary" href="http://localhost:4000/a5/assignment/title">
+      <a className="btn btn-primary" href="https://kanbas-node-server-app-jy0a.onrender.com/a5/assignment/title">
         Get Assignment Title
       </a>
       <span>  </span>
-      <a className="btn btn-primary" href="http://localhost:4000/a5/module/name">
+      <a className="btn btn-primary" href="https://kanbas-node-server-app-jy0a.onrender.com/a5/module/name">
         Get Module Name
       </a>
 

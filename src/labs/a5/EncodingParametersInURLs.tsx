@@ -15,7 +15,7 @@ function EncodingParametersInURLs() {
 
   // const [welcome, setWelcome] = useState("");
   // const fetchWelcome = async () => {
-  //   const response = await axios.get("http://localhost:4000/a5/welcome");
+  //   const response = await axios.get("https://kanbas-node-server-app-jy0a.onrender.com/a5/welcome");
   //   setWelcome(response.data);
   // };
   useEffect(() => {
@@ -26,13 +26,13 @@ function EncodingParametersInURLs() {
 
   const fetchSum = async (a: number, b: number) => {
     const response = await
-      axios.get(`http://localhost:4000/a5/add/${a}/${b}`);
+      axios.get(`https://kanbas-node-server-app-jy0a.onrender.com/a5/add/${a}/${b}`);
     setResult(response.data);
   };
 
   const fetchSubtraction = async (a: number, b: number) => {
     const response = await axios.get(
-      `http://localhost:4000/a5/subtract/${a}/${b}`);
+      `https://kanbas-node-server-app-jy0a.onrender.com/a5/subtract/${a}/${b}`);
     setResult(response.data);
   };
 
@@ -62,47 +62,47 @@ function EncodingParametersInURLs() {
       
       <h3>Path Parameters</h3>
       <button className="btn btn-primary">
-        <a href={`http://localhost:4000/a5/add/${a}/${b}`} style={{ textDecoration: "none", color: "black" }}>
+        <a href={`https://kanbas-node-server-app-jy0a.onrender.com/a5/add/${a}/${b}`} style={{ textDecoration: "none", color: "black" }}>
           Add {a} + {b}
         </a>
       </button>
       <span>  </span>
       <button className="btn btn-danger">
-        <a href={`http://localhost:4000/a5/subtract/${a}/${b}`} style={{ textDecoration: "none", color: "black" }}>
+        <a href={`https://kanbas-node-server-app-jy0a.onrender.com/a5/subtract/${a}/${b}`} style={{ textDecoration: "none", color: "black" }}>
           Substract {a} - {b}
         </a>
       </button>
       <span>  </span>
       <button className="btn btn-primary">
-        <a href={`http://localhost:4000/a5/multiply/${a}/${b}`} style={{ textDecoration: "none", color: "black" }}>
+        <a href={`https://kanbas-node-server-app-jy0a.onrender.com/a5/multiply/${a}/${b}`} style={{ textDecoration: "none", color: "black" }}>
           Multiply {a} * {b}
         </a>
       </button>
       <span>  </span>
       <button className="btn btn-danger">
-        <a href={`http://localhost:4000/a5/divide/${a}/${b}`} style={{ textDecoration: "none", color: "black" }}>
+        <a href={`https://kanbas-node-server-app-jy0a.onrender.com/a5/divide/${a}/${b}`} style={{ textDecoration: "none", color: "black" }}>
           Divide {a} / {b}
         </a>
       </button>
 
       <h3>Query Parameters</h3>
       <a className="btn btn-primary"
-        href={`http://localhost:4000/a5/calculator?operation=add&a=${a}&b=${b}`}>
+        href={`https://kanbas-node-server-app-jy0a.onrender.com/a5/calculator?operation=add&a=${a}&b=${b}`}>
         Add {a} + {b}
       </a>
       <span>  </span>
       <a className="btn btn-danger"
-        href={`http://localhost:4000/a5/calculator?operation=subtract&a=${a}&b=${b}`}>
+        href={`https://kanbas-node-server-app-jy0a.onrender.com/a5/calculator?operation=subtract&a=${a}&b=${b}`}>
         Substract {a} - {b}
       </a>
       <span>  </span>
       <a className="btn btn-primary"
-        href={`http://localhost:4000/a5/calculator?operation=multiply&a=${a}&b=${b}`}>
+        href={`https://kanbas-node-server-app-jy0a.onrender.com/a5/calculator?operation=multiply&a=${a}&b=${b}`}>
         Multiply {a} * {b}
       </a>
       <span>  </span>
       <a className="btn btn-danger"
-        href={`http://localhost:4000/a5/calculator?operation=divide&a=${a}&b=${b}`}>
+        href={`https://kanbas-node-server-app-jy0a.onrender.com/a5/calculator?operation=divide&a=${a}&b=${b}`}>
         Divide {a} / {b}
       </a>
      

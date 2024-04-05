@@ -17,7 +17,6 @@ function AssignmentEditor() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-
   const handleSave = async () => {
     const status = await client.updateAssignment(assignment);
     if(assignmentId === "new") {
