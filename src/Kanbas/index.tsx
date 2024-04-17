@@ -2,6 +2,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import KanbasNavigation from "./Navigation";
 import Dashboard from "./Dashboard";
 import Courses from "./Courses";
+import Account from "./Account";
 import { useState, useEffect } from "react";
 import axios from "axios";
 // import db from "./Database";
@@ -77,8 +78,9 @@ function Kanbas() {
             </div>
             <div>
                <Routes>
+                  <Route path="/Account/*" element={<Account />} />
                   <Route path="/" element={<Navigate to="Dashboard" />} /> {/* Dashboard is the default screen */}
-                  <Route path="Account" element={<h1>Account</h1>} />
+                  {/* <Route path="Account" element={<h1>Account</h1>} /> */}
                   <Route path="Dashboard" element={<Dashboard
                                                    courses={courses}
                                                    course={course}
