@@ -113,9 +113,9 @@ export default function UserTable() {
                     <BsPencil onClick={() => selectUser(user)} />
                 </button>
 
-                    <button onClick={() => deleteUser(user)}>
-                        <BsTrash3Fill />
-                    </button>
+                <button onClick={() => deleteUser(user)}>
+                    <BsTrash3Fill />
+                </button>
                 </td>
 
             </tr>))}
