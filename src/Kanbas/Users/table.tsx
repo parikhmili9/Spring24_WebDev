@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BsTrash3Fill, BsFillCheckCircleFill, BsPencil, BsPlusCircleFill } from "react-icons/bs";
+import { BsTrash3Fill, BsFillCheckCircleFill, BsPlusCircleFill, BsPencil } from "react-icons/bs";
 import * as client from "./client";
 import { User } from "./client";
 
@@ -109,9 +109,10 @@ export default function UserTable() {
                 <td>{user.lastName}</td>
                 <td>{user.role}</td>
                 <td>
-                    <button className="btn btn-warning me-2">
-                        <BsPencil onClick={() => selectUser(user)} />
-                    </button>
+                <button className="btn btn-warning me-2">
+                    <BsPencil onClick={() => selectUser(user)} />
+                </button>
+
                     <button onClick={() => deleteUser(user)}>
                         <BsTrash3Fill />
                     </button>

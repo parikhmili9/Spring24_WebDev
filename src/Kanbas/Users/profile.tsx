@@ -3,21 +3,24 @@ import { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 
 export default function Profile() {
-  const [profile, setProfile] = useState({ username: "", password: "", 
-    firstName: "", lastName: "", dob: "", email: "", role: "USER" });
-  const navigate = useNavigate();
-  const fetchProfile = async () => {
-    const account = await client.profile();
-    setProfile(account);
-    console.log(profile);
-  };
-  const save = async () => {
-    await client.updateUser(profile);
-  };
-  useEffect(() => {
-    fetchProfile();
-  }, []);
-  return (
+    const [profile, setProfile] = useState({ username: "", password: "", 
+        firstName: "", lastName: "", dob: "", email: "", role: "USER" });
+    const navigate = useNavigate();
+
+    const fetchProfile = async () => {
+        const account = await client.profile();
+        setProfile(account);
+        console.log(profile);
+    };
+
+    const save = async () => {
+        await client.updateUser(profile);
+    };
+    
+    useEffect(() => {
+        fetchProfile();
+    }, []);
+    return (
     <div>
         <h1>Profile</h1>
         <Link to="/Kanbas/Account/Admin/Users"

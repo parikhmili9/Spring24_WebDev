@@ -7,10 +7,18 @@ export default function Signin() {
     username: "", password: "", firstName: "", lastName: "", role: "USER"
   });
   const navigate = useNavigate();
+
   const signin = async () => {
-    await client.signin(credentials);
-    navigate("/Kanbas/Account/Profile");
+    try{
+      await client.signin(credentials);
+      navigate("/Kanbas/Account/Profile");
+    } catch(error){
+      console.error("Network Error:", error);
+      alert("Failed to sign in. Please try again.")
+    }
+    
   };
+
   return (
     <div>
       <h1>Signin</h1>
