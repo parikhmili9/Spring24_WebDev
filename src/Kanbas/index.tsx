@@ -9,10 +9,10 @@ import axios from "axios";
 import store from "./store";
 import { Provider } from "react-redux";
 
-// const API_BASE = process.env.REACT_APP_API_BASE;
+const API_BASE = process.env.REACT_APP_API_BASE;
 
 function Kanbas() {
-   // const COURSES_API = `${API_BASE}/api/courses`;
+   const COURSES_API = `${API_BASE}/api/courses`;
    const [courses, setCourses] = useState<any[]>([]);
 
    const [course, setCourse] = useState({
@@ -21,7 +21,7 @@ function Kanbas() {
       image: "../../images/d2.jpg"
    });
    
-   const COURSES_API = "https://kanbas-node-server-app-jy0a.onrender.com/api/courses";
+   //const COURSES_API = "https://kanbas-node-server-app-jy0a.onrender.com/api/courses";
 
    const findAllCourses = async () => {
      const response = await axios.get(COURSES_API);
